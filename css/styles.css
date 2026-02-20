@@ -11,7 +11,7 @@
   --color-white: #ffffff;
 }
 
-/* ПУНКТ B1: Глобальне скидання */
+/* Base resets */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
@@ -38,21 +38,17 @@ body {
   background-color: var(--color-white);
 }
 
-/* UTILS */
-/* ПУНКТ B8: Ширина контейнера 1158px */
+/* Utilities */
 .container {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* ПУНКТ B17: Секції з падінгами 120px */
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 
-/* ПУНКТ B18: visually-hidden за патерном */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -66,8 +62,7 @@ body {
   overflow: hidden;
 }
 
-/* HEADER */
-/* ПУНКТ B14: Нижня рамка хедера */
+/* Header */
 .page-header {
   border-bottom: 1px solid var(--color-accent);
 }
@@ -109,7 +104,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-dark);
-  /* ПУНКТ B15: block та падінги для висоти хедера */
   display: block;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -124,13 +118,11 @@ body {
   gap: 40px;
 }
 
-/* !!! ОСНОВНЕ ВИПРАВЛЕННЯ ДЛЯ МЕНТОРА !!! */
 .contact-link {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text);
-  /* Пункт B15: Додаємо display: block та padding */
   display: block;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -141,27 +133,20 @@ body {
   color: var(--color-brand-pressed);
 }
 
-/* HERO */
+/* Hero Section */
 .hero-section {
   background-color: var(--color-dark);
   padding: 188px 0;
-  /* ПУНКТ B16: Без зовнішніх марджинів */
-}
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-white);
   max-width: 496px;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
 }
 
 .hero-button {
@@ -173,10 +158,12 @@ body {
   letter-spacing: 0.04em;
   color: var(--color-white);
   cursor: pointer;
-  min-width: 169px;
-  height: 56px;
   border: none;
   border-radius: 4px;
+  /* ВИПРАВЛЕНО: додано padding замість просто висоти */
+  padding: 16px 32px;
+  min-width: 169px;
+  display: inline-block;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -184,7 +171,7 @@ body {
   background-color: var(--color-brand-pressed);
 }
 
-/* FEATURES */
+/* Features */
 .features-list {
   display: flex;
   gap: 24px;
@@ -209,7 +196,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* TEAM */
+/* Team Section */
 .team-section {
   background-color: var(--color-light);
 }
@@ -233,13 +220,12 @@ body {
   background-color: var(--color-white);
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-              0px 1px 1px rgba(46, 47, 66, 0.16), 
-              0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+/* ВИПРАВЛЕНО: додано горизонтальний padding 16px */
 .team-info {
-  padding: 32px 0;
+  padding: 32px 16px;
   text-align: center;
 }
 
@@ -258,7 +244,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* PORTFOLIO */
+/* Portfolio Section */
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -271,7 +257,6 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ПУНКТ B19: Рамка тільки у нижній частині (навколо інфо) */
 .portfolio-info {
   padding: 32px 16px;
   border: 1px solid var(--color-accent);
@@ -293,7 +278,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* FOOTER */
+/* Footer */
 .page-footer {
   background-color: var(--color-dark);
   padding: 100px 0;
@@ -302,7 +287,6 @@ body {
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
-  margin-right: 0;
 }
 
 .page-footer .logo-accent {
